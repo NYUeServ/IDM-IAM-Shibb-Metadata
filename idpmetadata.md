@@ -2,7 +2,7 @@
 
 ## InCommon provided metadata
 
-If your Service Provider is using InCommon metadata provided either through XML file or MDQ you are already set. No action is required from you.
+If your Service Provider is using InCommon metadata provided either through an XML file or MDQ you are already set. No action is required from you.
 
 ## Shibboleth Service Provider(SP)
 
