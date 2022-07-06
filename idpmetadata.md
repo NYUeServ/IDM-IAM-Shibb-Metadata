@@ -1,7 +1,7 @@
 # Obtaining Shibboleth IdP metadata
 
 ## InCommon provided metadata
-
+push
 If your Service Provider is using InCommon metadata provided either through an XML file or an MDQ (Metadata Query) Service you are already set. No action is required from you since you have the metadata file and that's what is needed.
 
 ## Shibboleth Service Provider(SP)
