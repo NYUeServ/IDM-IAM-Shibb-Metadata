@@ -2,17 +2,18 @@
 
 ## InCommon provided metadata
 
-If your Service Provider is using InCommon metadata provided either through an XML file or an MDQ (Metadata Query) Service you are already set. No action is required from you.
+If your Service Provider is using InCommon metadata provided either through an XML file or an MDQ (Metadata Query) Service you are already set. No action is required from you since you have the metadata file and that's what is needed.
 
 ## Shibboleth Service Provider(SP)
 
 ### Loading metadata from XML file
 
-This is very simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
+This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
 ```xml
 <MetadataProvider type="XML" path="/path/to/the/metadata.xml"/>
 ```
 where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to read this file.
+
 You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth.
 
 For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
