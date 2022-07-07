@@ -1,12 +1,12 @@
-# Obtaining Shibboleth IdP metadata
+## Obtaining Shibboleth IdP metadata
 
-## InCommon provided metadata
+### InCommon provided metadata
 push
 If your Service Provider is using InCommon metadata provided either through an XML file or an MDQ (Metadata Query) Service you are already set. No action is required from you since you have the metadata file and that's what is needed.
 
-## Shibboleth Service Provider(SP)
+### Shibboleth Service Provider(SP)
 
-### Loading metadata from XML file
+#### Loading metadata from XML file
 
 This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
 ```xml
@@ -18,7 +18,7 @@ You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/i
 
 For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
 
-### Loading metadata dynamically
+#### Loading metadata dynamically
 
 :warning: **_This is the recommened way to load IdP metadata_**
 
@@ -29,25 +29,22 @@ Please find the `<MetadataProvider/>` element in your `shibboleth2.xml` file and
 <MetadataProvider type="XML"
         url="https://shibboleth.nyu.edu/idp/shibboleth"
         backingFilePath="/path/to/your/backup.xml">
-  <MetadataFilter type="Signature" certificate="metadata-signing-key.pem"/>
-  <MetadataFilter type="RequireValidUntil" maxValidityInterval="8640000"/>
 </MetadataProvider>
 ```
 The **`backingFilePath`** has to be a location where your **`shibd`** has _read_ and _write_ access
 
 For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
 
-## Third party SP supporting metadata upload
-
-### Using XML file
+### Third party SP supporting metadata upload
+#### Using XML file
 
 You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth and save it to a file which you can upload to your SP (service provider) on the day and the time we change the certificates.
 
-### Using dynamic load
+#### Using dynamic load
 
 If your Service Provider supports dynamic metadata you can use this URL https://shibboleth.nyu.edu/idp/shibboleth and you should be set.
 
-## Third party SP with manual configuration
+### Third party SP with manual configuration
 
 With Service Providers that require manual configuration, you need to download (in most cases) just the IdP's signing certificates. If your Service Provider encrypts authentication requests you will also need IdP's encryption certificate.
 We support the following services:
@@ -65,3 +62,9 @@ You can download the certificates in advance from here
 - [Encrypting certificate]()
 
 
+---
+#### Note
+Third party SP(Service Provider) is 
+
+- software which implemented SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc. 
+- ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Ouath0 Okte, etc.
