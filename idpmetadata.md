@@ -38,7 +38,7 @@ For additional information how to configure this option please visit [XML Metada
 ### Third party SP supporting metadata upload
 #### Using XML file
 
-You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth and save it to a file which you can upload to your SP (service provider) **before** the date and time of the actual change
+You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth and save it to a file which you can upload to your SP (service provider) **before** the date and time of the actual change.
 
 #### Using dynamic load
 
