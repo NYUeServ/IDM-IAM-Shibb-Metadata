@@ -20,7 +20,7 @@ For additional information how to configure this option please visit [XML Metada
 
 #### Loading metadata dynamically
 
-:warning: **_This is the recommened way to load IdP metadata_**
+:warning: **_This is the recommended way to load IdP metadata_**
 
 Loading IdP metadata dynamically is the preferred way to configure a Shibboleth SP which is not an InCommon member.  This method is very similar to loading the metadata from a file.
 
@@ -38,7 +38,7 @@ For additional information how to configure this option please visit [XML Metada
 ### Third party SP supporting metadata upload
 #### Using XML file
 
-You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth and save it to a file which you can upload to your SP (service provider) on the day and the time we change the certificates.
+You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth and save it to a file which you can upload to your SP (service provider) **before** the date and time of the actual change
 
 #### Using dynamic load
 
