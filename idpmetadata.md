@@ -64,7 +64,12 @@ You can download the certificates in advance from here
 
 ---
 #### Note
-Third party SP(Service Provider) is 
 
-- software which implemented SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc. 
-- ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Ouath0 Okte, etc.
+Shibboleth Service Provider (SP) is
+
+- Software that implements SAML2 which was created by Shibboleth
+
+Third party SP (Service Provider) is 
+
+- Software which implements SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc. 
+- Ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Ouath0 Okte, etc.
