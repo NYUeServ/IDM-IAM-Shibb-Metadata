@@ -74,4 +74,4 @@ Shibboleth Service Provider (SP) is
 Third party SP (Service Provider) is 
 
 - Software which implements SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc. 
-- Ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Ouath0 Okte, etc.
+- Ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Auth0, Okta, etc.
