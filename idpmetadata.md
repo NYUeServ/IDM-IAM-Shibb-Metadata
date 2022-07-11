@@ -1,5 +1,7 @@
 ## Obtaining Shibboleth IdP metadata
 
+Any questions related to the Identity Provider metadata not answered below can be answered during the [_IAM Office Hours - SSO amd MFA_](https://calendar.google.com/calendar/embed?src=nyu.edu_23qne9rsrhuidta3ld7pnkok9o%2540group.calendar.google.com&ctz=America%252FNew_York)
+
 ### InCommon provided metadata
 
 If your Service Provider is using InCommon metadata provided either through an XML file or an MDQ (Metadata Query) Service you are already set. No action is required from you since you have the metadata file and that's what is needed.
