@@ -1,6 +1,6 @@
 ## Obtaining Shibboleth IdP metadata
 
-Any questions related to the Identity Provider metadata not answered below can be answered during the [_IAM Office Hours - SSO amd MFA_](https://calendar.google.com/calendar/embed?src=nyu.edu_23qne9rsrhuidta3ld7pnkok9o%2540group.calendar.google.com&ctz=America%252FNew_York)
+Any questions related to the Identity Provider metadata not answered below can be answered during the [_IAM Office Hours - SSO and MFA_](https://calendar.google.com/calendar/embed?src=nyu.edu_23qne9rsrhuidta3ld7pnkok9o%2540group.calendar.google.com&ctz=America%252FNew_York)
 
 ### InCommon provided metadata
 
