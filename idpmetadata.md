@@ -48,7 +48,8 @@ If your Service Provider supports dynamic metadata you can use this URL https://
 
 ### Third party SP with manual configuration
 
-With Service Providers that require manual configuration, you need to download (in most cases) just the IdP's signing certificates. If your Service Provider encrypts authentication requests you will also need IdP's encryption certificate.
+With Service Providers that require manual configuration, you need to download the new certificate from here:  [New Production Certificate](https://shibboleth.nyu.edu/prodidp.pem)
+
 We support the following services:
 - Single Sign On using HTTP-POST binding - https://shibboleth.nyu.edu/idp/profile/SAML2/POST/SSO
 - Single Sign On using HTTP-Redirect binding - https://shibboleth.nyu.edu/idp/profile/SAML2/Redirect/SSO **(Preferred)**
@@ -59,19 +60,14 @@ We support the following services:
 
 The certificate switch has to happen on the day and at the time we change them on the IdP.
 
-You can download the certificates in advance from here
-- [Signing certificate]()
-- [Encrypting certificate]()
-
-
 ---
 #### Note
 
-Shibboleth Service Provider (SP) is
+**_Shibboleth Service Provider (SP)_** is
 
 - Software that implements SAML2 which was created by Shibboleth
 
-Third party SP (Service Provider) is 
+**_Third party SP (Service Provider)_** is
 
-- Software which implements SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc. 
+- Software which implements SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc.
 - Ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Auth0, Okta, etc.
