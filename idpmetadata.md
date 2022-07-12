@@ -8,18 +8,6 @@ If your Service Provider is using InCommon metadata provided either through an X
 
 ### Shibboleth Service Provider(SP)
 
-#### Loading metadata from XML file
-
-This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
-```xml
-<MetadataProvider type="XML" path="/path/to/the/metadata.xml"/>
-```
-where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to read this file.
-
-You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth.
-
-For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
-
 #### Loading metadata dynamically
 
 :warning: **_This is the recommended way to load IdP metadata_**
@@ -36,6 +24,19 @@ Please find the `<MetadataProvider/>` element in your `shibboleth2.xml` file and
 The **`backingFilePath`** has to be a location where your **`shibd`** has _read_ and _write_ access
 
 For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
+
+#### Loading metadata from XML file
+
+This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
+```xml
+<MetadataProvider type="XML" path="/path/to/the/metadata.xml"/>
+```
+where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to read this file.
+
+You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth.
+
+For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
+
 
 ### Third party SP supporting metadata upload
 #### Using XML file
@@ -61,7 +62,7 @@ We support the following services:
 The certificate switch has to happen on the day and at the time we change them on the IdP.
 
 ---
-#### Note
+#### Note - Difference Between Shibboleth vs Third Party
 
 **_Shibboleth Service Provider (SP)_** is
 
