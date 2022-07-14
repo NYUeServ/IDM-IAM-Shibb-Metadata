@@ -4,7 +4,7 @@ Any questions related to the Identity Provider metadata not answered below can b
 
 ### InCommon provided metadata
 
-If your Service Provider is using InCommon metadata provided either through an XML file or an MDQ (Metadata Query) Service you are already set. No action is required from you since you have the metadata file and that's what is needed.
+If your Service Provider is using InCommon metadata provided either through an XML file or an [MDQ (Metadata Query) Service](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2060616133/MDQMetadataProvider) you are already set. No action is required from you since you have the metadata file and that's what is needed.
 
 ### Shibboleth Service Provider(SP)
 
@@ -18,7 +18,8 @@ Please find the `<MetadataProvider/>` element in your `shibboleth2.xml` file and
 ```xml
 <MetadataProvider type="XML"
         url="https://shibboleth.nyu.edu/idp/shibboleth"
-        backingFilePath="/path/to/your/backup.xml">
+        backingFilePath="/path/to/your/backup.xml"
+        maxRefreshDelay="PT1H">
 </MetadataProvider>
 ```
 The **`backingFilePath`** has to be a location where your **`shibd`** has _read_ and _write_ access
