@@ -1,6 +1,6 @@
 ## Obtaining Shibboleth IdP metadata
 
-Any questions related to the Identity Provider metadata not answered below can be answered during the [_IAM Office Hours - SSO and MFA_](https://calendar.google.com/calendar/embed?src=nyu.edu_23qne9rsrhuidta3ld7pnkok9o%40group.calendar.google.com&ctz=America%2FNew_York)
+?> Any questions related to the Identity Provider metadata not answered below can be answered during the [_IAM Office Hours - SSO and MFA_](https://calendar.google.com/calendar/embed?src=nyu.edu_23qne9rsrhuidta3ld7pnkok9o%40group.calendar.google.com&ctz=America%2FNew_York)
 
 ### InCommon provided metadata
 
@@ -8,9 +8,21 @@ If your Service Provider is using InCommon metadata provided either through an X
 
 ### Shibboleth Service Provider(SP)
 
+#### Loading metadata from XML file
+
+This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
+```xml
+<MetadataProvider type="XML" path="/path/to/the/metadata.xml"/>
+```
+where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to read this file.
+
+You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth.
+
+For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
+
 #### Loading metadata dynamically
 
-:warning: **_This is the recommended way to load IdP metadata_**
+?> **_This is the recommended way to load IdP metadata_**
 
 Loading IdP metadata dynamically is the preferred way to configure a Shibboleth SP which is not an InCommon member.  This method is very similar to loading the metadata from a file.
 
@@ -25,19 +37,6 @@ Please find the `<MetadataProvider/>` element in your `shibboleth2.xml` file and
 The **`backingFilePath`** has to be a location where your **`shibd`** has _read_ and _write_ access
 
 For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
-
-#### Loading metadata from XML file
-
-This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xml` file you need to find `<MetadataProvider/>` element and make it look like the following example:
-```xml
-<MetadataProvider type="XML" path="/path/to/the/metadata.xml"/>
-```
-where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to read this file.
-
-You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth.
-
-For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
-
 
 ### Third party SP supporting metadata upload
 #### Using XML file
@@ -60,10 +59,10 @@ We support the following services:
 
 :warning: **_The Single Logout binding method must correspond to Single Sign On binding._**
 
-The certificate switch has to happen on the day and at the time we change them on the IdP.
+!> **The certificate switch has to happen on the day and at the time we change them on the IdP, which is scheduled for August 5th at 16:00 EDT**
 
 ---
-#### Note - Difference Between Shibboleth vs Third Party
+#### Note
 
 **_Shibboleth Service Provider (SP)_** is
 
