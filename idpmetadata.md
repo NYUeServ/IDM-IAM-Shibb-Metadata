@@ -62,7 +62,7 @@ We support the following services:
 !> **The certificate switch has to happen on the day and at the time we change them on the IdP, which is scheduled for August 5th at 16:00 EDT**
 
 ---
-#### Note
+#### Note - Difference Between Shibboleth vs Third Party
 
 **_Shibboleth Service Provider (SP)_** is
 
