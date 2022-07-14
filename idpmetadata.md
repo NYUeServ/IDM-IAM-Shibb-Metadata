@@ -65,7 +65,7 @@ We support the following services:
 
 
 ---
-#### Note
+#### Note - Difference Between Shibboleth vs Third Party
 
 **_Shibboleth Service Provider (SP)_** is
 
