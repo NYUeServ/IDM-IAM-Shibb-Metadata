@@ -14,7 +14,7 @@ This is a simple and basic way to load the IdP metadata. In your `shibboleth2.xm
 ```xml
 <MetadataProvider type="XML" path="/path/to/the/metadata.xml"/>
 ```
-where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to read this file.
+where **`path`** value is the actual path to the IdP metadata file. You need to be sure that the **`shibd`** daemon is able to **_read_** this file.
 
 You can download NYU's Shibboleth IdP metadata from https://shibboleth.nyu.edu/idp/shibboleth.
 
@@ -34,7 +34,9 @@ Please find the `<MetadataProvider/>` element in your `shibboleth2.xml` file and
         maxRefreshDelay="PT1H">
 </MetadataProvider>
 ```
-The **`backingFilePath`** has to be a location where your **`shibd`** has _read_ and _write_ access
+The **`backingFilePath`** has to be a location where your **`shibd`** has **_read_** and **_write_** access. The **`maxRefreshDelay`** defines how ofthen the metadata has to be pulled from the IdP.
+
+?> **`maxRefreshDelay="PT4H"`** will pull metadata every 4 hours
 
 For additional information how to configure this option please visit [XML Metadata Provider](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063696005/XMLMetadataProvider)
 
@@ -60,6 +62,7 @@ We support the following services:
 :warning: **_The Single Logout binding method must correspond to Single Sign On binding._**
 
 !> **The certificate switch has to happen on the day and at the time we change them on the IdP, which is scheduled for August 5th at 16:00 EDT**
+
 
 ---
 #### Note
