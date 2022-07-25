@@ -51,7 +51,9 @@ If your Service Provider supports dynamic metadata you can use this URL https://
 
 ### Third party SP with manual configuration
 
-With Service Providers that require manual configuration, you need to download the new certificate from here:  [New Production Certificate](https://shibboleth.nyu.edu/prodidp.pem)
+With Service Providers that require manual configuration, you need to download the new certificate from here:  
+- PEM formt: [New Production Certificate](https://shibboleth.nyu.edu/prodidp.pem)
+- DER formt: [New Production Certificate](https://shibboleth.nyu.edu/prodidp.der)
 
 We support the following services:
 - Single Sign On using HTTP-POST binding - https://shibboleth.nyu.edu/idp/profile/SAML2/POST/SSO
