@@ -84,8 +84,10 @@ We support the following services:
 In case you can update your metadata or upload the new certificate ahead of the change on August 5th at 16:00 EDT, you can test the new setup following the instructions below.
 
 - Connect to the NYU VPN using split tunnel (NYU-NET Traffic Only) or connect to NYU VPN SEC, using AnyConnect, OpenConnect or any other VPN software.
-![AnyConnect](AnyConnect.png)
-![OpenConnect](OpenConnect.png)
+  
+![AnyConnect](AnyConnect.png 318x199)
+![OpenConnect](OpenConnect.png =318x199)
+
 - Copy or save the contents of your host file for the purpose of reverting it back after testing is completed
 - You need to edit the host file on your testing computer to point to stage.shibboleth.it.nyu.edu IPs in AWS. Your permission on the testing machine needs to be root for (Linux/OS X) or administrator for (Windows).  
 - Paths to the host file based on OS
