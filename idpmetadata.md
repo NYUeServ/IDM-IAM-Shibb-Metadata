@@ -129,8 +129,6 @@ __Sample Response__
 - Open Incognito/Private/InPrivate window and login to your application
 - Test functionality of the application
 - Report issues in the Testing Issues sheet
-
-###What to do after testing?
-
-Revert your host file, removing changes made for new Production Shibboleth certificate change.
+  
+!> **You have to revert all changes to your original `hosts` file after you finish the testing!
 
