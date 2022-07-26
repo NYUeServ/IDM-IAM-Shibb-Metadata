@@ -130,5 +130,5 @@ __Sample Response__
 - Test functionality of the application
 - Report issues in the Testing Issues sheet
   
-!> **You have to revert all changes to your original `hosts` file after you finish the testing!
+!> **You have to revert all changes to your original `hosts` file after you finish the testing!**
 
