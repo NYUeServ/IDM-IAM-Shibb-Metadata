@@ -77,3 +77,58 @@ We support the following services:
 
 - Software which implements SAML2 using a library or framework like PySAML2, SimpleSAMLphp, Spring Security SAML, etc.
 - Ready to use software like ADFS, Tivoli, Oracle, Ping Idenity, Auth0, Okta, etc.
+
+
+## Testing new Shibboleth IdP certificate
+
+In case you can update your metadata or upload the new certificate ahead of the change on August 5th at 16:00 EDT, you can test the new setup following the instructions below.
+
+- Connect to NYU VPN using split tunnel or connect to NYU VPN SEC, using AnyConnect, OpenConnect or any other VPM software.
+- Save the contents of your host file for the purpose of reverting it back after testing is completed
+- You need to edit the host file on your testing computer to point to stage.shibboleth.it.nyu.edu IPs in AWS. Your permission on the testing machine needs to be root for (Linux/OS X) or administrator for (Windows).  
+- Paths to the host file based on OS
+  - Windows - ```c:\windows\system32\drivers\etc\hosts```
+  - Linux - ```/etc/hosts```
+  - OS X - ```/etc/hosts```
+- Run the following command for (Windows, OS X, Linux)
+```bash 
+        nslookup stage.shibboleth.it.nyu.edu 
+```
+>>__Sample response__
+```bash
+        Server:		128.122.0.11
+        Address:	128.122.0.11#53
+
+        stage.shibboleth.it.nyu.edu	canonical name = stage.shibboleth.split.nyu.edu.
+        stage.shibboleth.split.nyu.edu	canonical name = internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
+        Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
+        Address: 10.129.104.243
+        Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
+        Address: 10.129.35.116
+```
+- Run the following command for (OS X, Linux)
+```bash
+        dig +noall +answe shibboleth.it.nyu.edu
+```
+>>__Sample Response”__
+```bash
+        stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
+        stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
+        internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.104.243
+        internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.35.116
+```
+
+- Copy the returned IPs to your hosts file and save it. (AWS IPs can change and thus you need to find the current IPs before you test)
+```bash
+#Stage Shibboleth IdP
+10.129.104.243 shibboleth.nyu.edu
+10.129.35.116 shibboleth.nyu.edu
+```
+- Open Incognito/Private/InPrivate window and login to your application
+- Test functionality of the application
+- Report issues in the Testing Issues sheet
+
+###What to do after testing?
+
+Revert your host file, removing changes made for new Production Shibboleth certificate change.
+
