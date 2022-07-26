@@ -124,6 +124,7 @@ __Sample Response__
 10.129.104.243 shibboleth.nyu.edu
 10.129.35.116 shibboleth.nyu.edu
 ```
+
 - Open Incognito/Private/InPrivate window and login to your application
 - Test functionality of the application
 - Report issues in the Testing Issues sheet
