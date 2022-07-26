@@ -114,7 +114,7 @@ __Sample response__
 - Run the following command for (OS X, Linux)
 
 ```bash
- dig +noall +answe shibboleth.it.nyu.edu
+ dig +noall +answe stage.shibboleth.it.nyu.edu
 ```
 
 __Sample Response__
