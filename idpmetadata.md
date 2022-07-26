@@ -83,8 +83,8 @@ We support the following services:
 
 In case you can update your metadata or upload the new certificate ahead of the change on August 5th at 16:00 EDT, you can test the new setup following the instructions below.
 
-- Connect to NYU VPN using split tunnel or connect to NYU VPN SEC, using AnyConnect, OpenConnect or any other VPM software.
-- Save the contents of your host file for the purpose of reverting it back after testing is completed
+- Connect to the NYU VPN using split tunnel (NYU-NET Traffic Only) or connect to NYU VPN SEC, using AnyConnect, OpenConnect or any other VPN software.
+- Copy or save the contents of your host file for the purpose of reverting it back after testing is completed
 - You need to edit the host file on your testing computer to point to stage.shibboleth.it.nyu.edu IPs in AWS. Your permission on the testing machine needs to be root for (Linux/OS X) or administrator for (Windows).  
 - Paths to the host file based on OS
   - Windows - ```c:\windows\system32\drivers\etc\hosts```
@@ -123,7 +123,7 @@ __Sample Response__
 ```
 
 - Copy the returned IPs to your hosts file and save it. 
-  >! AWS IPs can change and thus you need to find the current IPs before you test
+  !> AWS IPs can change and thus you need to find the current IPs before you test
 
 ```bash
  #Stage Shibboleth IdP
@@ -131,9 +131,8 @@ __Sample Response__
  10.129.35.116 shibboleth.nyu.edu
 ```
 
-- Open Incognito/Private/InPrivate window and login to your application
-- Test functionality of the application
-- Report issues in the Testing Issues sheet
+- Open an Incognito/Private/InPrivate browser window and login to your application
+- Test the functionality of the application
+- Report any issues in the Testing Issues sheet
   
 !> **You have to revert all changes to your original `hosts` file after you finish the testing!**
-
