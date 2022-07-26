@@ -110,7 +110,7 @@ __Sample response__
 ```bash
         dig +noall +answe shibboleth.it.nyu.edu
 ```
-__Sample Response”__
+__Sample Response__
 ```bash
         stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
         stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
