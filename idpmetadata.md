@@ -122,7 +122,8 @@ __Sample Response__
  internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.35.116
 ```
 
-- Copy the returned IPs to your hosts file and save it. (AWS IPs can change and thus you need to find the current IPs before you test)
+- Copy the returned IPs to your hosts file and save it. 
+  >! AWS IPs can change and thus you need to find the current IPs before you test
 
 ```bash
  #Stage Shibboleth IdP
