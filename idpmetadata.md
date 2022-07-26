@@ -137,6 +137,6 @@ __Sample Response__
 
 - Open an Incognito/Private/InPrivate browser window and login to your application
 - Test the functionality of the application
-- Report any issues in the Testing Issues sheet
+- Report any issues in the [Testing Issues sheet](https://docs.google.com/spreadsheets/d/1FJI2yI-xiRCdvz1Z-tmnjyvWGpHNLKO20dF4EJ_h4-Q/edit#gid=0)
   
 ?> **You have to revert all changes to your original `hosts` file after you finish the testing!**
