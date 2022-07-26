@@ -106,11 +106,15 @@ Address: 10.129.104.243
 Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
 Address: 10.129.35.116
 ```
+
 - Run the following command for (OS X, Linux)
+
 ```bash
-        dig +noall +answe shibboleth.it.nyu.edu
+dig +noall +answe shibboleth.it.nyu.edu
 ```
+
 __Sample Response__
+
 ```bash
 stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
 stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
