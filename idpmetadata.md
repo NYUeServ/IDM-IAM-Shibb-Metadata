@@ -122,8 +122,8 @@ __Sample Response__
 
 ```bash
         #Stage Shibboleth IdP
-       	10.129.104.243 shibboleth.nyu.edu
-       	10.129.35.116 shibboleth.nyu.edu
+        10.129.104.243 shibboleth.nyu.edu
+        10.129.35.116 shibboleth.nyu.edu
 ```
 
 - Open Incognito/Private/InPrivate window and login to your application
