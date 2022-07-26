@@ -92,42 +92,42 @@ In case you can update your metadata or upload the new certificate ahead of the 
   - OS X - ```/etc/hosts```
 - Run the following command for (Windows, OS X, Linux)
 ```bash 
-nslookup stage.shibboleth.it.nyu.edu 
+ nslookup stage.shibboleth.it.nyu.edu 
 ```
 __Sample response__
 ```bash
-Server:		128.122.0.11
-Address:	128.122.0.11#53
-
-stage.shibboleth.it.nyu.edu	canonical name = stage.shibboleth.split.nyu.edu.
-stage.shibboleth.split.nyu.edu	canonical name = internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
-Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
-Address: 10.129.35.116
-Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
-Address: 10.129.104.243
+ Server:		128.122.0.11
+ Address:	128.122.0.11#53
+ 
+ stage.shibboleth.it.nyu.edu	canonical name = stage.shibboleth.split.nyu.edu.
+ stage.shibboleth.split.nyu.edu	canonical name = internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
+ Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
+ Address: 10.129.35.116
+ Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
+ Address: 10.129.104.243
 ```
 
 - Run the following command for (OS X, Linux)
 
 ```bash
-dig +noall +answe shibboleth.it.nyu.edu
+ dig +noall +answe shibboleth.it.nyu.edu
 ```
 
 __Sample Response__
 
 ```bash
-stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
-stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
-internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.104.243
-internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.35.116
+ stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
+ stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
+ internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.104.243
+ internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com. 60 IN A 10.129.35.116
 ```
 
 - Copy the returned IPs to your hosts file and save it. (AWS IPs can change and thus you need to find the current IPs before you test)
 
 ```bash
-#Stage Shibboleth IdP
-10.129.104.243 shibboleth.nyu.edu
-10.129.35.116 shibboleth.nyu.edu
+ #Stage Shibboleth IdP
+ 10.129.104.243 shibboleth.nyu.edu
+ 10.129.35.116 shibboleth.nyu.edu
 ```
 
 - Open Incognito/Private/InPrivate window and login to your application
