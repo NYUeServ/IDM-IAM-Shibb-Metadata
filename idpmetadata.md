@@ -81,7 +81,7 @@ We support the following services:
 
 ## Testing new Shibboleth IdP certificate
 
-In case you can update your metadata or upload the new certificate ahead of the change on August 5th at 16:00 EDT, you can test the new setup following the instructions below.
+In case you can update your metadata or upload the new certificate ahead of the change on August 5th at 16:00 EDT, you can test the new setup following the instructions below:
 
 - Connect to the NYU VPN using split tunnel (NYU-NET Traffic Only) or connect to NYU VPN SEC, using AnyConnect, OpenConnect or any other VPN software.
   
@@ -89,7 +89,7 @@ In case you can update your metadata or upload the new certificate ahead of the 
 ![OpenConnect](OpenConnect.png ':size=320x200')
 
 - Copy or save the contents of your host file for the purpose of reverting it back after testing is completed
-- You need to edit the host file on your testing computer to point to stage.shibboleth.it.nyu.edu IPs in AWS. Your permission on the testing machine needs to be root for (Linux/OS X) or administrator for (Windows).  
+- You will need to edit the host file on your testing computer to point to stage.shibboleth.it.nyu.edu IPs in AWS. Your permission on the testing machine needs to be root for (Linux/OS X) or administrator for (Windows).  
 - Paths to the host file based on OS
   - Windows - ```c:\windows\system32\drivers\etc\hosts```
   - Linux - ```/etc/hosts```
@@ -112,13 +112,11 @@ __Sample response__
 ```
 
 - Run the following command for (OS X, Linux)
-
 ```bash
  dig +noall +answe stage.shibboleth.it.nyu.edu
 ```
 
 __Sample Response__
-
 ```bash
  stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
  stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
