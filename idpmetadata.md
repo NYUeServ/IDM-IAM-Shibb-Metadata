@@ -85,8 +85,8 @@ In case you can update your metadata or upload the new certificate ahead of the 
 
 - Connect to the NYU VPN using split tunnel (NYU-NET Traffic Only) or connect to NYU VPN SEC, using AnyConnect, OpenConnect or any other VPN software.
   
-![AnyConnect](AnyConnect.png 318x199)
-![OpenConnect](OpenConnect.png =318x199)
+![AnyConnect](AnyConnect.png ':size=320x200')
+![OpenConnect](OpenConnect.png ':size=320x200')
 
 - Copy or save the contents of your host file for the purpose of reverting it back after testing is completed
 - You need to edit the host file on your testing computer to point to stage.shibboleth.it.nyu.edu IPs in AWS. Your permission on the testing machine needs to be root for (Linux/OS X) or administrator for (Windows).  
@@ -139,4 +139,4 @@ __Sample Response__
 - Test the functionality of the application
 - Report any issues in the Testing Issues sheet
   
-!> **You have to revert all changes to your original `hosts` file after you finish the testing!**
+?> **You have to revert all changes to your original `hosts` file after you finish the testing!**
