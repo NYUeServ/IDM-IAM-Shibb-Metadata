@@ -127,6 +127,7 @@ __Sample Response__
 ```
 
 - Copy the returned IPs to your hosts file and save it. 
+
 !> AWS IPs can change and thus you need to find the current IPs before you test
 
 ```bash
