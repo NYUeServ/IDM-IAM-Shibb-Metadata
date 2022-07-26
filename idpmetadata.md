@@ -102,9 +102,9 @@ Address:	128.122.0.11#53
 stage.shibboleth.it.nyu.edu	canonical name = stage.shibboleth.split.nyu.edu.
 stage.shibboleth.split.nyu.edu	canonical name = internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
 Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
-Address: 10.129.104.243
-Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
 Address: 10.129.35.116
+Name:	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com
+Address: 10.129.104.243
 ```
 
 - Run the following command for (OS X, Linux)
