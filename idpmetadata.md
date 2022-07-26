@@ -120,7 +120,7 @@ __Sample Response__
 
 - Copy the returned IPs to your hosts file and save it. (AWS IPs can change and thus you need to find the current IPs before you test)
 ```bash
-#Stage Shibboleth IdP
+\#Stage Shibboleth IdP
 10.129.104.243 shibboleth.nyu.edu
 10.129.35.116 shibboleth.nyu.edu
 ```
