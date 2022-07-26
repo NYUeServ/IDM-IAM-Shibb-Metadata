@@ -94,7 +94,7 @@ In case you can update your metadata or upload the new certificate ahead of the 
 ```bash 
         nslookup stage.shibboleth.it.nyu.edu 
 ```
->>__Sample response__
+__Sample response__
 ```bash
         Server:		128.122.0.11
         Address:	128.122.0.11#53
@@ -110,7 +110,7 @@ In case you can update your metadata or upload the new certificate ahead of the 
 ```bash
         dig +noall +answe shibboleth.it.nyu.edu
 ```
->>__Sample Response”__
+__Sample Response”__
 ```bash
         stage.shibboleth.it.nyu.edu. 86400 IN	CNAME	stage.shibboleth.split.nyu.edu.
         stage.shibboleth.split.nyu.edu.	83174 IN CNAME	internal-shibboleth-stage-lb-internal-96999622.us-east-1.elb.amazonaws.com.
