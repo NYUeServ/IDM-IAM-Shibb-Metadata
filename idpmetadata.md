@@ -128,14 +128,27 @@ __Sample Response__
 
 !> AWS IPs can change and thus you need to find the current IPs before you test
 
-__Sample hosts file__
+__Sample `hosts` file__
 ```bash
- #Stage Shibboleth IdP
- 10.129.104.243 shibboleth.nyu.edu
- 10.129.35.116 shibboleth.nyu.edu
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost	localhost.com
+255.255.255.255	broadcasthost
+::1             localhost
+
+#AWS Staging IdP
+10.129.35.116 shibboleth.nyu.edu
+10.129.104.243 shibboleth.nyu.edu
 ```
 
 - Open an Incognito/Private/InPrivate browser window and login to your application
+  
+!> You will get certificate warning but that is OK and you can continue. 
+
 - Test the functionality of the application
 - Report any issues in the [Testing Issues sheet](https://docs.google.com/spreadsheets/d/1FJI2yI-xiRCdvz1Z-tmnjyvWGpHNLKO20dF4EJ_h4-Q/edit#gid=0)
   
